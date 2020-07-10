@@ -1,1 +1,1 @@
-# home
+# WELCOMETO STUDY MATE REPO

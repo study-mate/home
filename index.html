@@ -1,232 +1,575 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Sider Menu Bar CSS</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <style type="text/css">
-      @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
 *{
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
   text-decoration: none;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-}
- .wrapper{
-    margin: 10px;
-  }
-
-
-  .wrapper .top_navbar{
-    width: calc(100% - 20px);
-    height: 60px;
-    display: flex;
-    position: fixed;
-    top: 10px;
-    z-index: 1;
-  }
-
-  .main_content {
-    height: 100vh;
-    width: calc(100% - 20px);
-      /*border: 3px solid #000; */
-    margin: 10px;
-    border-radius: 20px;
-    position: fixed;
-    background:#fff;
-
-  }
-    
-  .wrapper .top_navbar .hamburger{
-    width: 70px;
-    height: 100%;
-    background: #2e4ead;
-    padding: 15px 17px;
-    border-top-left-radius: 20px;
-    cursor: pointer;
-  }
-
-  .wrapper .top_navbar .hamburger div{
-    width: 35px;
-    height: 4px;
-    background: #92a6e2;
-    margin: 5px 0;
-    border-radius: 5px;
-  }
-
-  .wrapper .top_navbar .top_menu{
-    width: calc(100% - 70px);
-    height: 100%;
-    background: #fff;
-    border-top-right-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-  }
-
-  .wrapper .top_navbar .top_menu .logo{
-    color: #2e4ead;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 3px;
-  }
-  .wrapper .top_navbar .top_menu ul{
-    display: flex;
-  }
-
-  .wrapper .top_navbar .top_menu ul li a{
-    display: block;
-    margin: 0 10px;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    text-align: center;
-    border: 1px solid #2e4ead;
-    border-radius: 50%;
-    color: #2e4ead;
-  }
-
-  .wrapper .top_navbar .top_menu ul li a:hover{
-    background: #4360b5;
-    color: #000;
-  }
-
-  .wrapper .top_navbar .top_menu ul li a:hover i{
-    color: #fff;
-  }
-.sidebar {
-  position: fixed;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #042331;
-  transition: all .5s ease;
-}
-.sidebar header {
-  font-size: 22px;
-  color: white;
-  line-height: 70px;
-  text-align: center;
-  background: #063146;
-  user-select: none;
-}
-.sidebar ul a{
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 20px;
-  color: white;
-  padding-left: 40px;
   box-sizing: border-box;
-  border-bottom: 1px solid black;
-  border-top: 1px solid rgba(255,255,255,.1);
-  transition: .4s;
+  font-family: 'Montserrat', sans-serif;
 }
-ul li:hover a{
-  padding-left: 50px;
+
+body{
+  background: #e1ecf2;
 }
-.sidebar ul a i{
-  margin-right: 16px;
+
+.wrapper{
+  margin: 10px;
 }
-#check{
-  display: none;
+
+.wrapper .top_navbar{
+  width: calc(100% - 20px);
+  height: 60px;
+  display: flex;
+  position: fixed;
+  top: 10px;
 }
-label #btn,label #cancel{
-  position: absolute;
-  background: #042331;
-  border-radius: 3px;
+
+.wrapper .top_navbar .hamburger{
+  width: 70px;
+  height: 100%;
+  background: #2e4ead;
+  padding: 15px 17px;
+  border-top-left-radius: 20px;
   cursor: pointer;
 }
-label #btn{
-  left: 40px;
-  top: 25px;
-  font-size: 35px;
-  color: white;
-  padding: 6px 12px;
-  transition: all .5s;
+
+.wrapper .top_navbar .hamburger div{
+  width: 35px;
+  height: 4px;
+  background: #92a6e2;
+  margin: 5px 0;
+  border-radius: 5px;
 }
-label #cancel{
-  z-index: 1111;
-  left: -195px;
-  top: 17px;
-  font-size: 30px;
-  color: #0a5275;
-  padding: 4px 9px;
-  transition: all .5s ease;
+
+.wrapper .top_navbar .top_menu{
+  width: calc(100% - 70px);
+  height: 100%;
+  background: #fff;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
-#check:checked ~ .sidebar{
+
+.wrapper .top_navbar .top_menu .logo{
+  color: #2e4ead;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.wrapper .top_navbar .top_menu ul{
+  display: flex;
+}
+
+.wrapper .top_navbar .top_menu ul li a{
+  display: block;
+  margin: 0 10px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #2e4ead;
+  border-radius: 50%;
+  color: #2e4ead;
+}
+
+.wrapper .top_navbar .top_menu ul li a:hover{
+  background: #4360b5;
+  color: #000;
+}
+
+.wrapper .top_navbar .top_menu ul li a:hover i{
+  color: #fff;
+}
+
+.wrapper .sidebar{
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  background: #2e4ead;
+  width: 200px;
+  height: calc(100% - 80px);
+  border-bottom-left-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    margin-bottom: 1px;
+    color: #92a6e2;
+    white-space: nowrap;
+}
+
+.wrapper .sidebar ul li a:before{
+  content: "";
+  position: absolute;
+  top: 0;
   left: 0;
-}
-#check:checked ~ label #btn{
-  left: 250px;
-  opacity: 0;
-  pointer-events: none;
-}
-#check:checked ~ label #cancel{
-  left: 195px;
-}
-#check:checked ~ section{
-  margin-left: 250px;
-}
-section{
-  background: url(bg.jpeg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  transition: all .5s;
+  width: 3px;
+  height: 100%;
+  background: #92a6e2;
+  display: none;
 }
 
-   
+.wrapper .sidebar ul li a span.icon{
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.wrapper .sidebar ul li a span.title{
+  display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+  background: #4360b5;
+  color: #fff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+  display: block;
+}
+
+.wrapper .main_container{
+  width: (100% - 200px);
+  margin-top: 70px;
+  margin-left: 200px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .main_container .item{
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.wrapper.collapse .sidebar{
+  width: 70px;
+}
+
+.wrapper.collapse .sidebar ul li a{
+  text-align: center; 
+}
+
+.wrapper.collapse .sidebar ul li a span.icon{
+  margin: 0;
+}
+
+.wrapper.collapse .sidebar ul li a span.title{
+  display: none;
+}
+
+.wrapper.collapse .main_container{
+  width: (100% - 70px);
+  margin-left: 70px;
+}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	background-image: linear-gradient(45deg, #7175da, #9790F2);
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+}
+
+.courses-container {
+	
+}
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 20%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	font-size: 18px;
+	
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.progress-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-align: right;
+	width: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 5px;
+	width: 100%;
+}
+
+.progress::after {
+	border-radius: 3px;
+	background-color: #2A265F;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 66%;
+}
+
+.progress-text {
+	font-size: 10px;
+	opacity: 0.6;
+	letter-spacing: 1px;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+}
+
+.floating-text a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
+	</style>
+</head>
+<body>
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<div class="wrapper">
   
-    </style>
-  </head>
-  <body>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-      <div class="wrapper">
-        <div class="top_navbar">
-           <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-          <div class="top_menu">
-            <div class="logo">
-               study mate 
-            </div>
-            <ul>
-                 <li>
-                  <a href="#"><i class="fas fa-bell"></i></a>
-                 </li>
-             
-            </ul>
-           
-          </div>
-        </div>
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">
+         study mate 
       </div>
-
-
-
-   
-    <div class="sidebar">
-    <header>My App</header>
-  <ul>
-<li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-<li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
-<li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
-<li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
-<li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
-<li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
-<li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
-</ul>
+      <ul>
+           <li>
+           	<a href="#"><i class="fas fa-bell"></i></a>
+           </li>
+       
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">Refrence Books</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-file-video"></i></span>
+          <span class="title">Question Papers</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+          <span class="title">Syllabus</span>
+          </a></li>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-blog"></i></span>
+          <span class="title">Notes</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-leaf"></i></span>
+          <span class="title">Sell Old Books</span>
+          </a></li>
+        <li><a href="#">
+          <span class="icon"><i class="fas fa-leaf"></i></span>
+          <span class="title">Earn With Us</span>
+          </a></li>  
+    </ul>
+  </div>
+  
+  <div class="main_container">
+    <div class="item">
+     <div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+			
+			<h2>Question Papers</h2>
+			
+		</div>
+		<div class="course-info">
+		  <h6>previous year question papers are a great way of predicting <br> questions in exam</h6>
+		  <button class="btn">Continue</button>
+		</div>
+	</div>
+	<div class="course">
+		<div class="course-preview">
+			
+			<h2>Refrence Books</h2>
+			
+		</div>
+		<div class="course-info">
+		  <h6>previous year question papers are a great way of predicting <br> questions in exam</h6>
+		  <button class="btn">Continue</button>
+		</div>
+	</div>
+	<div class="course">
+		<div class="course-preview">
+			
+			<h2>Notes</h2>
+			
+		</div>
+		<div class="course-info">
+		  <h6>previous year question papers are a great way of predicting <br> questions in exam</h6>
+		  <button class="btn">Continue</button>
+		</div>
+	</div>
+	<div class="course">
+		<div class="course-preview">
+			
+			<h2>Syllabus</h2>
+			
+		</div>
+		<div class="course-info">
+		  <h6>previous year question papers are a great way of predicting <br> questions in exam</h6>
+		  <button class="btn">Continue</button>
+		</div>
+	</div>
+	
 </div>
-<section></section>
-  </body>
+</div>
+    <div class="item">
+      <h1>Article: How to study properly during exams</h1>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae aspernatur!
+    </div>
+    
+  </div>
+</div>
+<script type="text/javascript">
+	$(".hamburger").click(function(){
+   $(".wrapper").toggleClass("collapse");
+});
+</script>
+
+</body>
 </html>

@@ -1,65 +1,232 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
   <head>
-  	<title>Sidebar 03</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sider Menu Bar CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+ .wrapper{
+    margin: 10px;
+  }
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
+
+  .wrapper .top_navbar{
+    width: calc(100% - 20px);
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .main_content {
+    height: 100vh;
+    width: calc(100% - 20px);
+      /*border: 3px solid #000; */
+    margin: 10px;
+    border-radius: 20px;
+    position: fixed;
+    background:#fff;
+
+  }
+    
+  .wrapper .top_navbar .hamburger{
+    width: 70px;
+    height: 100%;
+    background: #2e4ead;
+    padding: 15px 17px;
+    border-top-left-radius: 20px;
+    cursor: pointer;
+  }
+
+  .wrapper .top_navbar .hamburger div{
+    width: 35px;
+    height: 4px;
+    background: #92a6e2;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+
+  .wrapper .top_navbar .top_menu{
+    width: calc(100% - 70px);
+    height: 100%;
+    background: #fff;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+
+  .wrapper .top_navbar .top_menu .logo{
+    color: #2e4ead;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  .wrapper .top_navbar .top_menu ul{
+    display: flex;
+  }
+
+  .wrapper .top_navbar .top_menu ul li a{
+    display: block;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #2e4ead;
+    border-radius: 50%;
+    color: #2e4ead;
+  }
+
+  .wrapper .top_navbar .top_menu ul li a:hover{
+    background: #4360b5;
+    color: #000;
+  }
+
+  .wrapper .top_navbar .top_menu ul li a:hover i{
+    color: #fff;
+  }
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+}
+
+   
+  
+    </style>
   </head>
   <body>
-		
-		<div class="wrapper d-flex align-items-stretch">
-			<nav id="sidebar" class="active">
-				<div class="custom-menu">
-					<button type="button" id="sidebarCollapse" class="btn btn-primary">
-	          <i class="fa fa-bars"></i>
-	          <span class="sr-only">Toggle Menu</span>
-	        </button>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+      <div class="wrapper">
+        <div class="top_navbar">
+           <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+          <div class="top_menu">
+            <div class="logo">
+               study mate 
+            </div>
+            <ul>
+                 <li>
+                  <a href="#"><i class="fas fa-bell"></i></a>
+                 </li>
+             
+            </ul>
+           
+          </div>
         </div>
-				<div class="p-4">
-		  		<h1><a href="index.html" class="logo">Study Mate</a></h1>
-	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
-	            <a href="#"><span class="fa fa-home mr-3"></span> Home</a>
-	          </li>
-	          <li>
-	              <a href="#"><span class="fa fa-user mr-3"></span>Question Papers</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-briefcase mr-3"></span> Syllabus</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-sticky-note mr-3"></span>Refrence Books</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-paper-plane mr-3"></span> Notes</a>
-	          </li>
-	          <li>
-              <a href="#"><span class="fa fa-paper-plane mr-3"></span> Earn With Us</a>
-	          </li>
-	        </ul>
+      </div>
 
 
-	        <div class="footer">
-	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> </p>
-	        </div>
 
-	      </div>
-    	</nav>
-
-        <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-       
-		</div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+   
+    <div class="sidebar">
+    <header>My App</header>
+  <ul>
+<li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+<li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+<li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+<li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+<li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
+<li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+<li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
+</ul>
+</div>
+<section></section>
   </body>
 </html>

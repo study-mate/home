@@ -3,13 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-@font-family {
-			font-family: sequel;
-			src: url(sequel.ttf);
-		}
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Livvic:400,600&display=swap');
+
 
 body {
-  font-family: "sequel", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   margin: 0;
   padding: 0px;
 }
@@ -67,14 +65,14 @@ body {
   color: #4E1BDF; 
 }
 #mate {
-    color: #292929;
+    color: #0d1866d3;
 }
 #main {
   transition: margin-left .2s;
   padding: 16px;
   display: flexbox;
   box-shadow: 0px 1px 10px #999;
-  width: 100%;
+  width: 100px;
   height: 30px;
   }
 .icon, .icon::before, .icon::after{
@@ -109,6 +107,10 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+@media screen and (max-height: 800px) {
+   #main {width: 600px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
 </head>
 <body>
@@ -127,19 +129,20 @@ body {
     <div class="dot" id="openBtn" onclick="openNav()">
     <span class="icon" id="openBtn" onclick="openNav()"></span>
    </div> 
-  <div class="logo"><h2>Study <span id="mate">Mate</span> </h2></div>
+  <div class="logo" id="logo"><h2>STUDY<span id="mate">MATE</span> </h2></div>
 </div>
 
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("logo").style.marginLeft = "185px";
   document.getElementById("openBtn").style.visibility = "hidden";
+  
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("logo").style.marginLeft= "0";
   document.getElementById("openBtn").style.visibility = "visible";
 }
 </script>

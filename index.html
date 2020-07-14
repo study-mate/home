@@ -10,6 +10,7 @@ body {
   font-family: "Lexend Deca", sans-serif;
   margin: 0;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 .sidenav {
@@ -60,20 +61,23 @@ body {
 .logo {
   color:#000;
   position: relative;
-  top: -52px;
+  top: -54px;
   left: 50px;
   color: #4E1BDF; 
 }
 #mate {
     color: #0d1866d3;
 }
+#main{
+    width: ;
+}
 #main {
-  transition: margin-left .2s;
-  padding: 16px;
-  display: flexbox;
-  box-shadow: 0px 1px 10px #999;
-  width: 100px;
-  height: 30px;
+    height: 30px;
+    width: 200px;
+    transition: margin-left .2s;
+    padding: 16px;
+   box-shadow: 0px 1px 10px #999;
+ 
   }
 .icon, .icon::before, .icon::after{
     position: relative;
@@ -102,7 +106,10 @@ body {
     top: 12px;
     left: 12px;
 }
-
+.main_content img{
+    position: relative;
+    top: 100rem;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -122,20 +129,26 @@ body {
   <a href="#">Syllabus</a>
   <a href="#">Notes</a>
   <a href="#">Refrence Books</a>
+  <div class="footer">
+    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> </p>
+</div>
+
 </div>
 
 <div id="main">
-  
-    <div class="dot" id="openBtn" onclick="openNav()">
+   <div class="dot" id="openBtn" onclick="openNav()">
     <span class="icon" id="openBtn" onclick="openNav()"></span>
    </div> 
   <div class="logo" id="logo"><h2>STUDY<span id="mate">MATE</span> </h2></div>
+</div>
+<div class="main-content">
+   <img src="./main-pic.jpg" alt="Stugying Girl" style="width: 300px;">
 </div>
 
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("logo").style.marginLeft = "185px";
+  document.getElementById("logo").style.marginLeft = "188px";
   document.getElementById("openBtn").style.visibility = "hidden";
   
 }

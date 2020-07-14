@@ -114,6 +114,39 @@ body {
     top: 30px;
     z-index: -1;
    }
+  #quote {
+    font-family: Livvic ;
+    font-weight: 800;
+    position: relative;
+    top: -30px;
+    left: 50px;
+    font-size: 16px;
+}
+.notificationBell{
+    justify-items: center;
+    text-align: center;
+    display: ;
+    
+}
+#noti{
+    display: block;
+    margin: 0 10px;
+    position: relative;
+    float: right;
+    width: 24px;
+    height: 24px;
+    top:-44px;
+    right: 284px;
+   
+    border-radius: 50%;
+    box-shadow: .5px 1px 1px   #999; 
+}
+.logo ul li a:hover{
+  background: #4E1BDF;
+ }
+.logo ul li a:hover i{
+  color: #fff;
+} 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -122,17 +155,21 @@ body {
    #main {width: 320px;}
   .sidenav a {font-size: 18px;}
 }
+  
 </style>
 </head>
 <body>
-
-<div id="mySidenav" class="sidenav">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
  
   <a href="#">Question Papers</a>
   <a href="#">Syllabus</a>
   <a href="#">Notes</a>
   <a href="#">Refrence Books</a>
+  <a href="#">Articles</a>
+  <a href="#"> Official Notifications</a>
+  <a href="#">About</a>
   <div class="footer">
     <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> </p>
 </div>
@@ -143,10 +180,21 @@ body {
    <div class="dot" id="openBtn" onclick="openNav()">
     <span class="icon" id="openBtn" onclick="openNav()"></span>
    </div> 
-  <div class="logo" id="logo"><h2>STUDY<span id="mate">MATE</span> </h2></div>
+  <div class="logo" id="logo">
+      <h2>STUDY<span id="mate">MATE</span> </h2> 
+      <div class="notificationBell">
+        <ul>
+            <li>
+                <a href="#" id="noti"><i class="fas fa-bell"></i></a>
+            </li>
+         </ul>
+      </div>
+</div>  
+  
 </div>
 <div class="main-content">
-   <img src="./main-pic.jpg" alt="Stugying Girl" style="width: 300px;">
+   <img src="./main-pic.jpg" alt="Studying Girl" style="width: 300px;">
+   <h6 id="quote">“The earlier you start working on something,<br> the earlier you will see results.”</h6>
 </div>
 
 <script>

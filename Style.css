@@ -39,7 +39,9 @@ body{
 
 nav{
     padding: 0 2rem;
-    background: var(--sky);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    background: #ffffff;
     position: relative;
     justify-content: space-between;
     height: 0rem;

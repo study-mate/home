@@ -105,7 +105,7 @@ body {
     left: 12px;
 }
 .main-content {
-    height: 232px;
+    height: 236px;
     box-shadow: 0px 4px 6px -6px  #999; 
     
   }
@@ -125,7 +125,7 @@ body {
     overflow: hidden;
     top: -48px;
     left: 8px;
-    font-size: 16px;
+    font-size: 18px;
     white-space: nowrap;
 }
 #quotePart {
@@ -135,7 +135,7 @@ body {
     overflow: hidden;
     top: -60px;
     left: 10px;
-    font-size: 16px;
+    font-size: 18px;
     white-space: nowrap;
 }
 #quote {
@@ -155,11 +155,11 @@ body {
 
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 350px;}
+  to{width: 360px;}
 }
 @keyframes animated-text2{
   from{width: 0;}
-  to{width: 234px;}
+  to{width: 330px;}
 }
 
 /* cursor animations */
@@ -262,28 +262,36 @@ body {
                 <a href="#" id="noti"><i class="fas fa-bell"></i></a>
             </li>
          </ul>
+         
       </div>
-</div>  
-  
+  </div>  
 </div>
 <div class="main-content">
-   <img src="./main-pic.jpg" alt="Studying Girl" style="width: 300px;">
-   <p id="quote">“The earlier you start working on something,</p>
-   <p id="quotePart"> the earlier you will see results.”</p>
+   <img src="./main-pic.jpg" alt="Studying Girl" style="width: 300px;" id="img">
+   <p id="quote">“The earlier you start working on some-</p>
+   <p id="quotePart">-thing, the earlier you will see results.”</p>
 </div>
 
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("logo").style.marginLeft = "188px";
+  document.getElementById("quotePart").style.marginLeft = "230px";
+  document.getElementById("quote").style.marginLeft = "244px";
+  document.getElementById("img").style.marginLeft = "244px";
   document.getElementById("openBtn").style.visibility = "hidden";
+  document.getElementById("noti").style.visibility = "hidden";
   
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("logo").style.marginLeft= "0";
+  document.getElementById("quote").style.marginLeft= "0";
+  document.getElementById("img").style.marginLeft= "0";
+  document.getElementById("quotePart").style.marginLeft= "0";
   document.getElementById("openBtn").style.visibility = "visible";
+  document.getElementById("noti").style.visibility = "visible";
 }
 </script>
  

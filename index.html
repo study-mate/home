@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Livvic:400,600&display=swap');
 
@@ -68,9 +69,7 @@ body {
 #mate {
     color: #0d1866d3;
 }
-#main{
-    width: ;
-}
+
 #main {
     height: 30px;
     width: 200px;
@@ -106,22 +105,76 @@ body {
     left: 12px;
 }
 .main-content {
-   box-shadow: 0px 4px 6px -6px  #999; 
+    height: 232px;
+    box-shadow: 0px 4px 6px -6px  #999; 
+    
   }
 .main-content img{
     position: relative;
     left: 30px;
-    top: -22px;
+    top: -12px;
     z-index: -1;
    }
+ .main-content p{
+     width: 300px;
+      }  
   #quote {
     font-family: Livvic ;
     font-weight: 800;
     position: relative;
-    top: -30px;
+    overflow: hidden;
+    top: -48px;
+    left: 8px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+#quotePart {
+    font-family: Livvic ;
+    font-weight: 800;
+    position: relative;
+    overflow: hidden;
+    top: -60px;
     left: 10px;
     font-size: 16px;
+    white-space: nowrap;
 }
+#quote {
+    border-right: solid 3px rgba(0,0,0,1);
+    animation: animated-text 5s steps(83,end) 1s 1 normal both,
+             animated-cursor 200ms steps(83,end) infinite;
+}
+
+#quotePart{
+             border-right: solid 3px rgba(255,255,255,1); 
+              animation: animated-text2 5s steps(83,end) 6s 1 normal both,
+             animated-cursor2 200ms steps(83,end) infinite;
+             -webkit-animation-delay: 6s; 
+             animation-delay: 6s ; 
+}
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 350px;}
+}
+@keyframes animated-text2{
+  from{width: 0;}
+  to{width: 234px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,0,0,1);}
+  to{border-right-color: rgba(255, 255, 255, 1);}
+}
+
+@keyframes animated-cursor2{
+    from{border-right-color: rgba(255,255,255,1);}
+  to{border-right-color: rgba(0,0,0,1);;}
+}
+
+
 .notificationBell{	
 	    position: relative;	
 	    float: right;	
@@ -203,7 +256,8 @@ body {
 </div>
 <div class="main-content">
    <img src="./main-pic.jpg" alt="Studying Girl" style="width: 300px;">
-   <h6 id="quote">“The earlier you start working on something,<br> the earlier you will see results.”</h6>
+   <p id="quote">“The earlier you start working on something,</p>
+   <p id="quotePart"> the earlier you will see results.”</p>
 </div>
 
 <script>
@@ -220,6 +274,6 @@ function closeNav() {
   document.getElementById("openBtn").style.visibility = "visible";
 }
 </script>
-   
+ 
 </body>
 </html> 
